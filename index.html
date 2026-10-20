@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name — AI Video Creator</title>
+  <meta name="description" content="Portfolio of AI-generated films, commercials, music videos and experiments." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#top">YOUR<span>NAME</span></a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#tools">Tools</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="btn btn-small">Hire me</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <video class="hero-bg" id="heroVideo" autoplay muted loop playsinline></video>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow">AI Video Director &amp; Creator</p>
+        <h1>Cinematic stories,<br /><span class="gradient-text">generated with AI.</span></h1>
+        <p class="lead">I craft short films, commercials and music videos using generative AI tools — from concept and prompt design to final edit and sound.</p>
+        <div class="hero-actions">
+          <a href="#work" class="btn">View my work</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
+        <ul class="stats">
+          <li><strong id="statCount">0</strong><span>Projects</span></li>
+          <li><strong>1M+</strong><span>Views</span></li>
+          <li><strong>10+</strong><span>AI tools</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="section">
+      <div class="section-head">
+        <p class="eyebrow">Portfolio</p>
+        <h2>Selected work</h2>
+      </div>
+      <div class="filters" id="filters" role="tablist"></div>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <!-- TOOLS -->
+    <section id="tools" class="section section-alt">
+      <div class="section-head">
+        <p class="eyebrow">Toolkit</p>
+        <h2>What I create with</h2>
+      </div>
+      <ul class="tools" id="toolsList"></ul>
+      <div class="process">
+        <div class="step"><span>01</span><h3>Concept</h3><p>Story, moodboards and a shot list tailored to your brand or idea.</p></div>
+        <div class="step"><span>02</span><h3>Generate</h3><p>Prompt design, image &amp; video generation, consistent characters and styles.</p></div>
+        <div class="step"><span>03</span><h3>Edit</h3><p>Cutting, upscaling, colour grading, motion graphics and VFX clean-up.</p></div>
+        <div class="step"><span>04</span><h3>Sound</h3><p>AI voiceover, music and sound design for a polished final film.</p></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <div class="about-photo" aria-hidden="true">YN</div>
+      <div>
+        <p class="eyebrow">About</p>
+        <h2>Hi, I'm Your Name.</h2>
+        <p>I'm an AI video creator who blends traditional filmmaking instincts with the newest generative tools. I help brands, musicians and storytellers turn ideas into striking visuals — faster and more affordably than ever before.</p>
+        <p>Replace this text with your own story: your background, the kind of projects you love, and the clients or results you're proud of.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section-alt contact">
+      <p class="eyebrow">Contact</p>
+      <h2>Let's make something unreal.</h2>
+      <p class="lead">Available for commissions, collaborations and brand campaigns.</p>
+      <a class="btn" href="mailto:hello@example.com">hello@example.com</a>
+      <ul class="socials">
+        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a></li>
+        <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">© <span id="year"></span> Your Name. All videos created with AI.</footer>
+
+  <!-- VIDEO MODAL -->
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-box">
+      <button class="modal-close" data-close aria-label="Close">×</button>
+      <div class="player" id="player"></div>
+      <div class="modal-info">
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc"></p>
+        <div class="tags" id="modalTags"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="videos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
